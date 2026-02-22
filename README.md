@@ -14,9 +14,6 @@ EduConnect is a full-stack web application designed to help students easily uplo
 * **Database:** SQLite3
 * **Middleware/Storage:** Multer (for secure file uploads), CORS
 
-## 📋 Project Context
-*This application was originally conceived as a college group project. However, I served as the **Sole Technical Developer** for this application, independently architecting and writing 100% of the codebase across the frontend, backend, and database systems.*
-
 ## ⚙️ How to Run Locally
 1. Clone the repository to your local machine.
 2. Ensure [Node.js](https://nodejs.org/) is installed.
