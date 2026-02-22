@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="create-profile-page">
+        <div class="profile-creation-box">
+            <h1>Welcome to EduConnect 🎓</h1>
+            <p>Create a profile to get started.</p>
+            <form id="profile-form">
+                <input type="text" id="profile-new-username" placeholder="Enter your username" required>
+                <input type="number" id="profile-new-standard" placeholder="Enter your standard (5-12)" min="5" max="12" required>
+                <button type="submit" class="cta-button">Create Profile</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="app-wrapper" class="hidden">
+        <header>
+            <div class="container">
+                <h1>EduConnect 🎓</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#" id="home-link">Home</a></li>
+                        <li><a href="#" id="profile-link">Profile</a></li>
+                        <li><button id="upload-button" class="cta-button">Upload Note</button></li>
+                        <li><button id="logout-button" class="cta-button">Log Out</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <div id="home-page">
+                <section class="hero">
+                    <section class="search-section">
+                    <input type="search" id="search-input" placeholder="Search notes by title or subject...">
+                </section>
+                    <h2>Share and Discover Study Notes</h2>
+                    <p>Your one-stop platform for Kerala syllabus notes from Standard 5 to +2.</p>
+                </section>
+                <section class="notes-feed">
+                    <h3>Latest Notes</h3>
+                    <div id="notes-container" class="notes-grid"></div>
+                </section>
+            </div>
+            <section id="profile-page" class="hidden">
+                <div class="profile-header">
+                    <h2 id="profile-username"></h2>
+                    <p id="profile-standard"></p>
+                </div>
+                <h3>My Uploaded Notes</h3>
+                <div id="profile-notes-container" class="notes-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="upload-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span id="close-modal-button" class="close-button">&times;</span>
+            <h3>Upload a New Note</h3>
+            <form id="upload-form">
+                <input type="text" id="note-title" placeholder="Note Title" required>
+                <input type="text" id="note-subject" placeholder="Subject" required>
+                <input type="file" id="note-file" required>
+                <button type="submit" class="cta-button">Submit Note</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* --- Global Styles & Reset --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto Mono', monospace; background-color: #0a0c10; color: #c9d1d9; }
+h1, h2, h3, h4 { font-family: 'Audiowide', sans-serif; }
+.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+.hidden { display: none !important; }
+.cta-button { background: transparent; color: #00f7ff; padding: 10px 20px; border-radius: 5px; border: 1px solid #00f7ff; cursor: pointer; font-family: 'Roboto Mono', monospace; font-size: 1rem; transition: all 0.3s ease; }
+.cta-button:hover { background: rgba(0, 247, 255, 0.1); box-shadow: 0 0 10px rgba(0, 247, 255, 0.5); }
+
+/* --- Profile Creation Page --- */
+#create-profile-page { display: flex; justify-content: center; align-items: center; height: 100vh; transition: opacity 0.5s ease-out; }
+.profile-creation-box { text-align: center; background: #161b22; padding: 3rem; border-radius: 8px; border: 1px solid #30363d; max-width: 500px; width: 90%; }
+.profile-creation-box h1 { color: #00f7ff; margin-bottom: 1rem; }
+#profile-form input { width: 100%; padding: 12px; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #30363d; background-color: #0a0c10; color: #c9d1d9; font-size: 1rem; }
+#profile-form .cta-button { width: 100%; }
+
+/* --- Main App Wrapper --- */
+#app-wrapper { animation: fadeIn 1s ease-in-out; }
+
+/* --- Header --- */
+header { padding: 1.5rem 0; border-bottom: 1px solid #30363d; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+header h1 { color: #00f7ff; text-shadow: 0 0 5px rgba(0, 247, 255, 0.7); }
+header nav ul { list-style: none; display: flex; align-items: center; gap: 25px; }
+header nav a { color: #c9d1d9; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+header nav a:hover { color: #00f7ff; }
+
+/* --- Main Content --- */
+main { padding: 2rem 0; }
+.hero { text-align: center; margin-bottom: 3rem; }
+.notes-feed h3 { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: #00f7ff; }
+.notes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+.note-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 25px; transition: transform 0.3s ease, border-color 0.3s ease; cursor: pointer; }
+.note-card:hover { transform: translateY(-5px); border-color: #00f7ff; }
+.note-card h4 { color: #00f7ff; margin-bottom: 10px; }
+.note-card .meta { font-size: 0.8rem; color: #8b949e; margin-bottom: 15px; word-break: break-all; }
+
+/* --- Profile Page --- */
+#profile-page h3 { text-align: center; color: #00f7ff; font-size: 2rem; margin-top: 2rem; margin-bottom: 2rem; }
+.profile-header { text-align: center; padding: 2rem; background-color: #161b22; border-radius: 8px; }
+#profile-username { color: #00f7ff; font-size: 2.5rem; }
+
+/* --- Upload Modal --- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(10, 12, 16, 0.8); backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: #161b22; padding: 2rem; border-radius: 8px; width: 90%; max-width: 500px; position: relative; }
+.close-button { position: absolute; top: 10px; right: 15px; font-size: 2rem; color: #8b949e; cursor: pointer; }
+#upload-form input { width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #30363d; background-color: #0a0c10; color: #c9d1d9; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* New styles for the search bar */
+.search-section input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 2rem;
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.search-section input:focus {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+    border-color: #00f7ff;
+}
+.delete-btn {
+    margin-top: 10px;
+    background: transparent;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #ff4d4d;
+    color: #fff;
+}
